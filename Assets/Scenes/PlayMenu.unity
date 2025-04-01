@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00002503395, y: -3.35}
+  m_AnchoredPosition: {x: 0.00002503395, y: -3.47}
   m_SizeDelta: {x: -0.000050068, y: -4.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &90029251
@@ -176,10 +176,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Introduction
+  m_text: "Introduction\n\u4ECB\u7ECD"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 022971a37b6f7c347b0783646070c3ea, type: 2}
-  m_sharedMaterial: {fileID: 4121016171701120300, guid: 022971a37b6f7c347b0783646070c3ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
+  m_sharedMaterial: {fileID: 479564216134921272, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -312,10 +312,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play Menu
+  m_text: "Play Menu \u6E38\u73A9\u83DC\u5355"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 022971a37b6f7c347b0783646070c3ea, type: 2}
-  m_sharedMaterial: {fileID: 4121016171701120300, guid: 022971a37b6f7c347b0783646070c3ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
+  m_sharedMaterial: {fileID: 479564216134921272, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -425,7 +425,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00002515316, y: -3.35}
+  m_AnchoredPosition: {x: -0.00002515316, y: -3.47}
   m_SizeDelta: {x: -0.000049829, y: -4.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &289280649
@@ -448,10 +448,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Selft-Test
+  m_text: "Self-Test\n\u6D4B\u9A8C"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 022971a37b6f7c347b0783646070c3ea, type: 2}
-  m_sharedMaterial: {fileID: 4121016171701120300, guid: 022971a37b6f7c347b0783646070c3ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
+  m_sharedMaterial: {fileID: 479564216134921272, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -585,7 +585,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6017854976298362701, guid: dd24c9432e394f94891d0060c034b7db, type: 3}
+  m_Sprite: {fileID: -4314609244250449954, guid: c214220e980945949851316d31de1ca8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -844,7 +844,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00001001358, y: -3.35}
+  m_AnchoredPosition: {x: 0.00001001358, y: -3.47}
   m_SizeDelta: {x: -0.000020027, y: -4.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1261692191
@@ -867,10 +867,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level
+  m_text: "Level\n\u5173\u5361"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 022971a37b6f7c347b0783646070c3ea, type: 2}
-  m_sharedMaterial: {fileID: 4121016171701120300, guid: 022971a37b6f7c347b0783646070c3ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
+  m_sharedMaterial: {fileID: 479564216134921272, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1263,7 +1263,7 @@ GameObject:
   - component: {fileID: 1456867365}
   - component: {fileID: 1456867364}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Button_selftest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1384,7 +1384,7 @@ GameObject:
   - component: {fileID: 1672229715}
   - component: {fileID: 1672229714}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button_introduction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1505,7 +1505,7 @@ GameObject:
   - component: {fileID: 1679171825}
   - component: {fileID: 1679171824}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Button_level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
