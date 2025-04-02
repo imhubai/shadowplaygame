@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Level2 : MonoBehaviour
+public class Level2 : LevelController
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

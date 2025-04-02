@@ -1,33 +1,18 @@
-using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class Pocket : MonoBehaviour
+public class FightPlayer : MonoBehaviour
 {
-    private Collider2D _collider;
-
     [Header("Movement Settings")] public float moveSpeed = 5f;
-    public float leftBoundary = -5f;
-    public float rightBoundary = 5f;
-    public Level3 levelController;
     private bool _isMovingLeft;
     private bool _isMovingRight;
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("DropItem"))
-        {
-            GameObject o = other.gameObject;
-            ItemDrop itemDrop = o.GetComponent<ItemDrop>();
-            levelController.SendMessage("PointChange", itemDrop.point);
-            Destroy(other.gameObject);
-        }
-    }
-
+    public Animator animator;
     void Start()
     {
-        _collider = GetComponent<Collider2D>();
+        animator.SetBool("isrunning", false);
     }
-
+    
     void Update()
     {
         HandleMovement();
@@ -38,15 +23,6 @@ public class Pocket : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
-        // Fun
-        // if (v > 0)
-        // {
-        //     WukongMoveUp();
-        // }
-        // else if (v < 0)
-        // {
-        //     WukongMoveDown();
-        // }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             LeftButtonPressed();
@@ -69,21 +45,25 @@ public class Pocket : MonoBehaviour
     private void HandleMovement()
     {
         Vector3 newPosition = transform.position;
-
         if (_isMovingLeft)
         {
+            animator.SetBool("isrunning", true);
             newPosition += moveSpeed * Time.deltaTime * Vector3.left;
         }
-
-        if (_isMovingRight)
+        else if (_isMovingRight)
         {
+            animator.SetBool("isrunning", true);
             newPosition += moveSpeed * Time.deltaTime * Vector3.right;
         }
+        else
+        {
+            animator.SetBool("isrunning", false);
+        }
 
-        newPosition.x = Mathf.Clamp(newPosition.x, leftBoundary, rightBoundary);
         transform.position = newPosition;
     }
 
+    public void AttackButtonClicked() => animator.SetTrigger("attack");
     public void LeftButtonPressed() => _isMovingLeft = true;
     public void RightButtonPressed() => _isMovingRight = true;
 

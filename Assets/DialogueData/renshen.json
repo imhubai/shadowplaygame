@@ -1,0 +1,44 @@
+﻿{
+  "dialogItems": [
+    {
+      "characterName": "人参果1",
+      "content": "当你看到这句话的时候，我的头像是人参果",
+      "hasAvatar": true,
+      "avatarFileName": "renshen_normal",
+      "hasSound": false,
+      "soundFileName": "sound_a.mp3",
+      "hasImageChange": false,
+      "imageFileName": null
+    },
+    {
+      "characterName": "人参果2",
+      "content": "当你看到我的时候，我的背景是人参果",
+      "hasAvatar": false,
+      "avatarFileName": null,
+      "hasSound": false,
+      "soundFileName": "sound_b.mp3",
+      "hasImageChange": true,
+      "imageFileName": "renshen_normal"
+    },
+    {
+      "characterName": "角色A",
+      "content": "你好，世界！",
+      "hasAvatar": false,
+      "avatarFileName": "avatar_a.png",
+      "hasSound": false,
+      "soundFileName": "sound_a.mp3",
+      "hasImageChange": false,
+      "imageFileName": null
+    },
+    {
+      "characterName": "角色B",
+      "content": "这是一个测试对话",
+      "hasAvatar": false,
+      "avatarFileName": null,
+      "hasSound": false,
+      "soundFileName": "sound_b.mp3",
+      "hasImageChange": false,
+      "imageFileName": "scene_1.jpg"
+    }
+  ]
+}

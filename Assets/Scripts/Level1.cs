@@ -5,12 +5,12 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class Level1 : MonoBehaviour
+public class Level1 : LevelController
 {
     public float[] posList;
     public GameObject[] heartList;
     public int posIndex = 1;
-    public bool isStart = false;
+
     public GameObject moveGroup;
     public GameObject player;
     public int winCount =4;

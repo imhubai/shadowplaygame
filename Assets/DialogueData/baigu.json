@@ -1,0 +1,44 @@
+﻿{
+  "dialogItems": [
+    {
+      "characterName": "角色A",
+      "content": "你好，世界！",
+      "hasAvatar": false,
+      "avatarFileName": "avatar_a.png",
+      "hasSound": false,
+      "soundFileName": "sound_a.mp3",
+      "hasImageChange": false,
+      "imageFileName": null
+    },
+    {
+      "characterName": "角色B",
+      "content": "这是一个测试对话",
+      "hasAvatar": false,
+      "avatarFileName": null,
+      "hasSound": false,
+      "soundFileName": "sound_b.mp3",
+      "hasImageChange": false,
+      "imageFileName": "scene_1.jpg"
+    },
+    {
+      "characterName": "角色A",
+      "content": "你好，世界！",
+      "hasAvatar": false,
+      "avatarFileName": "avatar_a.png",
+      "hasSound": false,
+      "soundFileName": "sound_a.mp3",
+      "hasImageChange": false,
+      "imageFileName": null
+    },
+    {
+      "characterName": "角色B",
+      "content": "这是一个测试对话",
+      "hasAvatar": false,
+      "avatarFileName": null,
+      "hasSound": false,
+      "soundFileName": "sound_b.mp3",
+      "hasImageChange": false,
+      "imageFileName": "scene_1.jpg"
+    }
+  ]
+}
