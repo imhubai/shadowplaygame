@@ -1,6 +1,9 @@
 using System;
 using UnityEngine;
 
+/// <summary>
+/// Level1关卡使用的碰撞检测
+/// </summary>
 public class Player : MonoBehaviour
 {
     public Level1 level1;

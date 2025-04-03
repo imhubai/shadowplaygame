@@ -1,6 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// DialogueData对话存储Json实体
+/// </summary>
 [System.Serializable]
 public class DialogueData
 {

@@ -1,16 +1,38 @@
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class FightPlayer : MonoBehaviour
 {
     [Header("Movement Settings")] public float moveSpeed = 5f;
     private bool _isMovingLeft;
     private bool _isMovingRight;
-
+    public int maxHp = 100;
+    public int curHp = 100;
+    public Image hpBar;
+    
     public Animator animator;
+    public void TakeDamage(int damage)
+    {
+        curHp -= damage;
+        ChangeHp(curHp,this.maxHp);
+    }
+
+    public void ChangeHp(int cur, int max)
+    {
+        float value = cur * 1.0f / max;
+        hpBar.fillAmount = value;
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Damage damage = other.GetComponent<Damage>();
+        if (other.CompareTag("EnemyDamage"))
+        {
+            TakeDamage(damage.damage);
+        }
+    }
     void Start()
     {
-        animator.SetBool("isrunning", false);
     }
     
     void Update()

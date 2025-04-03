@@ -5,13 +5,16 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// AVG类对话
+/// </summary>
 public class Dialogue : MonoBehaviour
 {
     public TextAsset dialogueDataJson;
     private List<DialogueData> _dialogueDataList;
 
     public LevelController levelController;
-    
+
     public int dialogueIndex = 0;
 
     public Image backGroundImage;
@@ -24,16 +27,25 @@ public class Dialogue : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 0;
         DialogueLoad();
         DialogueStart(0);
     }
 
+    /// <summary>
+    /// 退出对话
+    /// </summary>
     private void OnDestroy()
     {
-        // GOTO levelx
+        // GOTO level
+        Time.timeScale = 1;
+        // 开始关卡
         levelController.LevelStart();
     }
 
+    /// <summary>
+    /// 加载对话内容Json到List
+    /// </summary>
     public void DialogueLoad()
     {
         if (dialogueDataJson != null)
@@ -47,31 +59,38 @@ public class Dialogue : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 点击对话框事件
+    /// </summary>
     public void NextClicked()
     {
         dialogueIndex++;
-        if (dialogueIndex == _count - 1)
+        if (dialogueIndex == _count)
         {
             Destroy(this.gameObject);
+            return;
         }
-
         DialogueStart(dialogueIndex);
     }
 
+    /// <summary>
+    /// 更新当前对话内容与背景
+    /// </summary>
+    /// <param name="index">当前对话索引</param>
     public void DialogueStart(int index)
     {
         DialogueData data = _dialogueDataList[index];
         if (data.hasImageChange)
         {
             Debug.Log(data.imageFileName);
-            Sprite image = Resources.Load<Sprite>("Assets/Sprites/" + data.imageFileName) as Sprite;
+            Sprite image = Resources.Load<Sprite>(data.imageFileName) as Sprite;
             backGroundImage.sprite = image;
             backGroundImage.GetComponent<Image>().color = Color.white;
         }
 
         if (data.hasAvatar)
         {
-            Sprite image = Resources.Load<Sprite>("Assets/Sprites/" + data.avatarFileName) as Sprite;
+            Sprite image = Resources.Load<Sprite>(data.avatarFileName) as Sprite;
             avatarChara.sprite = image;
         }
 

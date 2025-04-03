@@ -46,8 +46,7 @@ public class Level1 : LevelController
     {
         Debug.Log("Win");
     }
-
-
+    
     public void ChangePoint(int value)
     {
         this.point += value;

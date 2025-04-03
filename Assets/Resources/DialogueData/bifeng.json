@@ -1,0 +1,44 @@
+﻿{
+  "dialogItems": [
+    {
+      "characterName": "孙悟空 Sun Wukong",
+      "content": "师父，前面就是火焰山，那铁扇公主的芭蕉扇能扇出千里神风！\nMaster, ahead lies the Flaming Mountains! Princess Iron Fan's palm-leaf fan can summon winds for a thousand miles!",
+      "hasAvatar": true,
+      "avatarFileName": "wukong_concerned",
+      "hasImageChange": true,
+      "imageFileName": "flaming_mountains"
+    },
+    {
+      "characterName": "孙悟空 Sun Wukong",
+      "content": "上次老孙去借扇子，被她一扇子扇到小须弥山，整整飞了五万四千里！\nLast time I was blown 54,000 miles to Mount Sumeru with a single swing!",
+      "hasAvatar": true,
+      "avatarFileName": "wukong_annoyed",
+      "hasSound": true,
+      "soundFileName": "whoosh.wav"
+    },
+    {
+      "characterName": "孙悟空 Sun Wukong",
+      "content": "灵吉菩萨的定风珠专克这类法宝，待俺老孙去求来！\nLingji Bodhisattva's Wind-Fixing Pearl counters such magic. I'll go beg for it!",
+      "hasAvatar": true,
+      "avatarFileName": "wukong_idea",
+      "hasImageChange": true,
+      "imageFileName": "wind_pearl"
+    },
+    {
+      "characterName": "孙悟空 Sun Wukong",
+      "content": "有了此宝，任她扇得天地变色，咱们自可稳步前行！\nWith this treasure, we'll march forward even if she darkens the sky with wind!",
+      "hasAvatar": true,
+      "avatarFileName": "wukong_confident",
+      "hasSound": true,
+      "soundFileName": "magic_glow.wav"
+    },
+    {
+      "characterName": "孙悟空 Sun Wukong",
+      "content": "八戒沙僧保护好师父，俺去去就回！\nBrothers, guard Master well! I'll be back in a flash!",
+      "hasAvatar": true,
+      "avatarFileName": "wukong_leaping",
+      "hasImageChange": true,
+      "imageFileName": "cloud_jump"
+    }
+  ]
+}

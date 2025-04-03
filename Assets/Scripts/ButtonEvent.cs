@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// 普通按钮事件
+/// </summary>
 public class MainButton : MonoBehaviour
 {
-    public void PlayButtonClicked()
-    {
-        SceneManager.LoadScene("PlayMenu");
-    }
-
     public void BackHomeButtonClicked()
     {
         SceneManager.LoadScene("Main");
@@ -20,14 +18,22 @@ public class MainButton : MonoBehaviour
         Application.Quit();
     }
 
-    public void LearnButtonClicked()
+    public void IntroductionButtonClicked()
     {
-        SceneManager.LoadScene("Learn");
+        SceneManager.LoadScene("Introduction");
+    }
+    public void PlayMenuButtonClicked()
+    {
+        SceneManager.LoadScene("PlayMenu");
     }
 
-    public void LevelMenuButtonClicked()
+    public void SettingsButtonClicked()
     {
-        SceneManager.LoadScene("LevelMenu");
+        SceneManager.LoadScene("Settings");
+    }
+    public void LevelButtonClicked()
+    {
+        SceneManager.LoadScene("Level");
     }
 
     public void SelfTestButtonClicked()
@@ -44,9 +50,5 @@ public class MainButton : MonoBehaviour
     {
         SceneManager.LoadScene("VR");
     }
-
-    public void AchievementsButtonClicked()
-    {
-        SceneManager.LoadScene("Achievement");
-    }
+    
 }

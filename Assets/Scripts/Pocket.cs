@@ -1,10 +1,11 @@
 using System;
 using UnityEngine;
 
+/// <summary>
+/// 袋子
+/// </summary>
 public class Pocket : MonoBehaviour
 {
-    private Collider2D _collider;
-
     [Header("Movement Settings")] public float moveSpeed = 5f;
     public float leftBoundary = -5f;
     public float rightBoundary = 5f;
@@ -25,7 +26,6 @@ public class Pocket : MonoBehaviour
 
     void Start()
     {
-        _collider = GetComponent<Collider2D>();
     }
 
     void Update()
@@ -38,7 +38,7 @@ public class Pocket : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
-        // Fun
+        // for Fun
         // if (v > 0)
         // {
         //     WukongMoveUp();

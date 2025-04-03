@@ -210,7 +210,7 @@ MonoBehaviour:
   m_text: "Play \u6E38\u73A9"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
-  m_sharedMaterial: {fileID: 479564216134921272, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
+  m_sharedMaterial: {fileID: 5884390301741305101, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -346,7 +346,7 @@ MonoBehaviour:
   m_text: "Exit \u9000\u51FA"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
-  m_sharedMaterial: {fileID: 479564216134921272, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
+  m_sharedMaterial: {fileID: 5884390301741305101, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -887,7 +887,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 667872921}
         m_TargetAssemblyTypeName: MainButton, Assembly-CSharp
-        m_MethodName: ExitButtonClicked
+        m_MethodName: ARButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1126,7 +1126,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 667872921}
         m_TargetAssemblyTypeName: MainButton, Assembly-CSharp
-        m_MethodName: ExitButtonClicked
+        m_MethodName: SettingsButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1411,7 +1411,7 @@ GameObject:
   - component: {fileID: 672623769}
   - component: {fileID: 672623768}
   m_Layer: 0
-  m_Name: yun_0
+  m_Name: cloud_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1936,7 +1936,7 @@ MonoBehaviour:
   m_text: "Settings \u8BBE\u7F6E\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
-  m_sharedMaterial: {fileID: 479564216134921272, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
+  m_sharedMaterial: {fileID: 5884390301741305101, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2097,7 +2097,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 667872921}
         m_TargetAssemblyTypeName: MainButton, Assembly-CSharp
-        m_MethodName: PlayButtonClicked
+        m_MethodName: PlayMenuButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2423,7 +2423,7 @@ MonoBehaviour:
   m_text: "AR \u626B\u63CF"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
-  m_sharedMaterial: {fileID: 479564216134921272, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
+  m_sharedMaterial: {fileID: 5884390301741305101, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

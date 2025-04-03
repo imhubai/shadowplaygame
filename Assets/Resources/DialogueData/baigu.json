@@ -1,0 +1,48 @@
+﻿{
+  "dialogItems": [
+    {
+      "characterName": "孙悟空 Sun Wukong",
+      "content": "妖精！你三番两次变化人形害我师父，真当老孙的火眼金睛是摆设不成？\nDemon! You've repeatedly harmed my master in human disguise. Do you think my Fiery Golden Eyes are blind?!",
+      "hasAvatar": true,
+      "avatarFileName": "wukong_angry",
+      "hasSound": false,
+      "hasImageChange": true,
+      "imageFileName": "bajie_injured"
+    },
+    {
+      "characterName": "白骨精 White Bone Spirit",
+      "content": "大圣何必动怒？那小和尚的肉...不过借我长生罢了！\nWhy so angry, Great Sage? That little monk's flesh... shall merely grant me immortality!",
+      "hasAvatar": true,
+      "avatarFileName": "baigujing_smile",
+      "hasSound": false,
+      "hasImageChange": false
+    },
+    {
+      "characterName": "孙悟空 Sun Wukong",
+      "content": "呔！吃俺老孙一棒！\nHah! Taste my golden cudgel!",
+      "hasAvatar": true,
+      "avatarFileName": "wukong_attack",
+      "hasSound": true,
+      "soundFileName": "golden_cudgel.wav",
+      "hasImageChange": true,
+      "imageFileName": "battle_scene"
+    },
+    {
+      "characterName": "白骨精 White Bone Spirit",
+      "content": "啊！——（化作白骨原型）\nArgh!——(reverts to white bones)",
+      "hasAvatar": false,
+      "hasSound": true,
+      "soundFileName": "scream.wav",
+      "hasImageChange": true,
+      "imageFileName": "white_bones"
+    },
+    {
+      "characterName": "孙悟空 Sun Wukong",
+      "content": "师父你看！这才是她的本来面目！\nMaster, behold! This is her true form!",
+      "hasAvatar": true,
+      "avatarFileName": "wukong_point",
+      "hasSound": false,
+      "hasImageChange": false
+    }
+  ]
+}

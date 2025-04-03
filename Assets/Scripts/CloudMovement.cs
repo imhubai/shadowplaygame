@@ -1,57 +1,51 @@
 using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Level1中的移动云朵
+/// </summary>
 public class CloudMovement : MonoBehaviour
 {
-    public float downHeight = 2f;    // 下降高度
-    public float speed = 1f;        // 移动速度（单位/秒）
-    
-    private float startY;            // 初始Y坐标
-    private Coroutine moveCoroutine;
-    private bool movingDown = true;  // 移动方向标记
+    public float downHeight = 2f;
+    public float speed = 1f;
+
+    private float _startY;
+    private Coroutine _moveCoroutine;
+    private bool _movingDown = true;
 
     void Start()
     {
-        startY = transform.position.y;
-        moveCoroutine = StartCoroutine(SmoothMove());
+        _startY = transform.position.y;
+        _moveCoroutine = StartCoroutine(SmoothMove());
     }
 
     void OnDisable()
     {
-        if (moveCoroutine != null)
-            StopCoroutine(moveCoroutine);
+        if (_moveCoroutine != null) StopCoroutine(_moveCoroutine);
     }
 
     IEnumerator SmoothMove()
     {
-        // 计算目标位置
-        float targetYDown = startY - downHeight;
-        float targetYUp = startY;
+        float targetYDown = _startY - downHeight;
+        float targetYUp = _startY;
 
         while (true)
         {
-            // 获取当前坐标的x/z值（保持不变）
             Vector3 currentPos = transform.position;
-            
-            // 确定目标Y坐标
-            float targetY = movingDown ? targetYDown : targetYUp;
-            
-            // 移动过程
+            float targetY = _movingDown ? targetYDown : targetYUp;
             while (Mathf.Abs(currentPos.y - targetY) > 0.01f)
             {
-                // 使用Lerp平滑移动Y轴
                 currentPos.y = Mathf.Lerp(
                     currentPos.y,
                     targetY,
                     speed * Time.deltaTime);
-                
+
                 transform.position = currentPos;
                 yield return null;
-                currentPos = transform.position; // 保持x/z不变
+                currentPos = transform.position;
             }
 
-            // 切换方向
-            movingDown = !movingDown;
+            _movingDown = !_movingDown;
             yield return null;
         }
     }

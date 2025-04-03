@@ -1,5 +1,10 @@
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
+/// <summary>
+/// 固定位置2D范围随机生成
+/// </summary>
 public class RandomSpawn2D : MonoBehaviour
 
 {
@@ -11,10 +16,24 @@ public class RandomSpawn2D : MonoBehaviour
     [SerializeField] float width = 9.5f;
     [SerializeField] float height = 0;
     private GameObject _newObj;
-    public int objCount = 10;
-    private int n = 0;
+    public int objCount = 100;
+    private int _i = 0;
+
+    private bool _gameStart = false;
+    private void OnEnable()
+    {
+        _gameStart = true;
+    }
 
     void Update()
+    {
+        if (_gameStart)
+        {
+            HandleTimer();
+        }
+    }
+
+    void HandleTimer()
     {
         timer += Time.deltaTime;
 
@@ -27,9 +46,9 @@ public class RandomSpawn2D : MonoBehaviour
             timer = 0;
         }
 
-        if (n >= objCount)
+        if (_i >= objCount)
         {
-            n = 0;
+            _i = 0;
             Destroy(gameObject);
         }
     }
@@ -41,6 +60,6 @@ public class RandomSpawn2D : MonoBehaviour
         generatePos = new Vector2(posX, posY);
         _newObj = Instantiate(objs[Random.Range(0, objs.Length)], generatePos, Quaternion.identity);
         _newObj.transform.parent = centerObj.transform;
-        n++;
+        _i++;
     }
 }

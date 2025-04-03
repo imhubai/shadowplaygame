@@ -1,0 +1,47 @@
+﻿{
+  "dialogItems": [
+    {
+      "characterName": "孙悟空 Sun Wukong",
+      "content": "嘿嘿，这金击子才是摘人参果的正经家伙！\nHeh, this golden mallet is the proper tool for harvesting ginseng fruits!",
+      "hasAvatar": true,
+      "avatarFileName": "wukong_holding_mallet",
+      "hasImageChange": true,
+      "imageFileName": "golden_mallet_closeup"
+    },
+    {
+      "characterName": "孙悟空 Sun Wukong",
+      "content": "铛！——（金击子敲击树枝，人参果纹丝不动）\nClang!—(Mallet strikes branch, but fruit won't budge)",
+      "hasAvatar": true,
+      "avatarFileName": "wukong_confused",
+      "hasSound": true,
+      "soundFileName": "metal_tap.wav",
+      "hasImageChange": false
+    },
+    {
+      "characterName": "孙悟空 Sun Wukong",
+      "content": "怪哉！莫非要用这金盘接着才行？\nStrange! Must we catch them with the golden plate?",
+      "hasAvatar": true,
+      "avatarFileName": "wukong_thinking",
+      "hasImageChange": true,
+      "imageFileName": "golden_plate"
+    },
+    {
+      "characterName": "孙悟空 Sun Wukong",
+      "content": "叮！叮！叮！（三声脆响，人参果应声坠落）\nDing! Ding! Ding! (Three chimes, fruits fall)",
+      "hasAvatar": false,
+      "hasSound": true,
+      "soundFileName": "crystal_chime.wav",
+      "hasImageChange": true,
+      "imageFileName": "fruits_falling_to_plate"
+    },
+    {
+      "characterName": "孙悟空 Sun Wukong",
+      "content": "妙啊！金击子配金盘，这才合乎天地法则！\nMarvelous! Golden mallet with golden plate - this obeys cosmic rules!",
+      "hasAvatar": true,
+      "avatarFileName": "wukong_cheering",
+      "hasSound": true,
+      "soundFileName": "success_jingle.wav",
+      "hasImageChange": false
+    }
+  ]
+}
