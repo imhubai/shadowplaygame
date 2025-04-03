@@ -11,12 +11,13 @@ public class PlayGate : MonoBehaviour
     public GameObject levelContentPrefab;
     public TextAsset levelDataJson;
     private List<LevelInfo> _levelInfoList;
-    
+
     private int _levelIndex = 0;
     public float _topPos = 800f;
-    
+
     private int _count;
     private GameObject _temp;
+
     private void Start()
     {
         LevelInfoLoad();
@@ -27,15 +28,41 @@ public class PlayGate : MonoBehaviour
     {
         foreach (LevelInfo levelInfo in _levelInfoList)
         {
-            int best = 10;
-            bool isLocked = false;
-            _temp = Instantiate(levelContentPrefab,content.transform);
+            int best = -1;
+            if (levelInfo.isScoreLevel)
+            {
+                try
+                {
+                    best = PlayerPrefs.GetInt(levelInfo.levelSceneName + "-best");
+                }
+                catch (Exception e)
+                {
+                    best = -1;
+                }
+            }
+            int isLocked = 1;
+            try
+            {
+                if (PlayerPrefs.GetInt(levelInfo.levelSceneName + "-success") == 1)
+                {
+                    isLocked = 2;
+                };
+            }
+            catch (Exception e)
+            {
+                isLocked = 1;
+            }
+
+            if (_levelIndex == 0) isLocked = -1;
+
+            _temp = Instantiate(levelContentPrefab, content.transform);
             _temp.GetComponent<LevelContent>().Init(levelInfo.name, levelInfo.levelSceneName, best, isLocked);
             _temp.GetComponent<RectTransform>().anchoredPosition =
                 new Vector3(10.5f, _topPos + _levelIndex * (-250f), 0);
             _levelIndex++;
         }
     }
+
     public void LevelInfoLoad()
     {
         if (levelDataJson != null)
@@ -48,7 +75,6 @@ public class PlayGate : MonoBehaviour
             Debug.LogError("JSON文件加载失败");
         }
     }
-    
 }
 
 [System.Serializable]

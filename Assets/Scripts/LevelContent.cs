@@ -13,19 +13,19 @@ public class LevelContent : MonoBehaviour
     public Image imageLocked;
 
     public string levelSceneName;
-    
-    public void Init(string name,string sceneName, int best, bool locked)
+
+    public void Init(string name, string sceneName, int best, int locked)
     {
-        if (locked)
+        if (locked==1)
         {
             this.imageLocked.gameObject.SetActive(true);
         }
-        else
+        else if(locked==2)
         {
             this.imageSuccess.gameObject.SetActive(true);
         }
 
-        if (best.IsUnityNull())
+        if (best.IsUnityNull() || best == -1)
         {
             this.levelBest.gameObject.SetActive(false);
         }
@@ -35,6 +35,7 @@ public class LevelContent : MonoBehaviour
             StringBuilder stringBuilder = new StringBuilder();
             this.levelBest.SetText(stringBuilder.Append("最佳:").Append(best).Append("\n").Append("Best:").ToString());
         }
+
         this.levelName.SetText(name);
         this.levelSceneName = sceneName;
     }

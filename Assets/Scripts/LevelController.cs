@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Level的超类
@@ -7,10 +9,38 @@ using UnityEngine;
 /// </summary>
 public class LevelController : MonoBehaviour
 {
+    public GameObject pausePage;
     public bool isStart = false;
-
+    public string nextLevelSceneName = "";
+    
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
+    
     public void LevelStart()
     {
         isStart = true;
+    }
+
+    public void GamePause()
+    {
+        pausePage.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void GameResume()
+    {
+        pausePage.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void GameRestart()
+    {
+        SceneManager.LoadScene(sceneName: SceneManager.GetActiveScene().name);
+    }
+    public void GameQuit()
+    {
+        SceneManager.LoadScene("Level");
     }
 }

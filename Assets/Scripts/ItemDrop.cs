@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -31,5 +32,13 @@ public class ItemDrop : MonoBehaviour
     void Drop()
     {
         _rigidbody2d.gravityScale = dropSpeed;
+    }
+
+    private void Update()
+    {
+        if (this.transform.position.y < -10)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
