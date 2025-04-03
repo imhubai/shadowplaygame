@@ -1,0 +1,28 @@
+﻿{
+  "dialogItems": [
+    {
+      "characterName": "孙悟空 Sun Wukong",
+      "content": "嘿！这里是一个知识小测验\nHeh, This is a knowledge quiz!",
+      "hasAvatar": false,
+      "avatarFileName": "",
+      "hasImageChange": false,
+      "imageFileName": ""
+    },
+    {
+      "characterName": "孙悟空 Sun Wukong",
+      "content": "想必这点小题肯定难不倒你！\nI'm sure this small question won't stump you!",
+      "hasAvatar": false,
+      "avatarFileName": "",
+      "hasImageChange": false,
+      "imageFileName": ""
+    },
+    {
+      "characterName": "孙悟空 Sun Wukong",
+      "content": "一共有八道题，没有时间限制，开始吧\nThere are a total of eight questions, no time limit, let's get started!",
+      "hasAvatar": false,
+      "avatarFileName": "",
+      "hasImageChange": false,
+      "imageFileName": ""
+    }
+  ]
+}

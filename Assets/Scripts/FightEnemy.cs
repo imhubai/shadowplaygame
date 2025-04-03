@@ -24,8 +24,8 @@ public class FightEnemy : MonoBehaviour
     private bool _isMovingRight;
     private bool _isIdle;
     private float _attackTimer;
-    private bool _isAttacking;
 
+    public Level2 level2;
     void Start()
     {
         StartCoroutine(RandomMovement());
@@ -91,7 +91,6 @@ public class FightEnemy : MonoBehaviour
 
         if (availableAttacks.Count > 0)
         {
-            _isAttacking = true;
             _isIdle = true;
             string selectedAttack = availableAttacks[Random.Range(0, availableAttacks.Count)];
 
@@ -106,7 +105,6 @@ public class FightEnemy : MonoBehaviour
 
             // 等待攻击动画时间
             yield return new WaitForSeconds(3f);
-            _isAttacking = false;
             _isIdle = false;
         }
     }
@@ -115,11 +113,16 @@ public class FightEnemy : MonoBehaviour
     {
         curHp -= damage;
         ChangeHp(curHp, maxHp);
-        if (curHp <= 0) Destroy(gameObject);
+        
+
     }
 
     public void ChangeHp(int cur, int max)
-    {
+    {       
+        if (cur <= 0)
+        {
+            level2.GameOver(true);
+        }
         hpBar.fillAmount = (float)cur / max;
     }
 

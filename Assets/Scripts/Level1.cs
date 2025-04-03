@@ -24,12 +24,13 @@ public class Level1 : LevelController
     private float _targetY;
     private bool _isMoving;
 
+    public Level1GameOver gameOverHandle;
     public void ChangeHp(int value)
     {
         hp += value;
         if (hp < 0)
         {
-            GameOver();
+            GameOver(false);
             return;
         }
         else
@@ -38,13 +39,11 @@ public class Level1 : LevelController
         }
     }
 
-    public void GameOver()
+    public void GameOver(bool win)
     {
-        Debug.Log("OVER");
-    }
-    public void GameWin()
-    {
-        Debug.Log("Win");
+        gameOverHandle.gameOverPage.SetActive(true);
+
+        gameOverHandle.Init(win, false, 0, 0, false, null);
     }
     
     public void ChangePoint(int value)
@@ -55,7 +54,7 @@ public class Level1 : LevelController
         pointText.SetText(stringBuilder.ToString());
         if (point == winCount)
         {
-            GameWin();
+            GameOver(true);
             return;
         }
     }

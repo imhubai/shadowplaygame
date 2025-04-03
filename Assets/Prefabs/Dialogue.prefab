@@ -335,9 +335,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lady White Bone
-
-'
+  m_text: White Bone Spirit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}
   m_sharedMaterial: {fileID: 5884390301741305101, guid: 732acf4b3156d2c4796d8de86432eef4, type: 2}

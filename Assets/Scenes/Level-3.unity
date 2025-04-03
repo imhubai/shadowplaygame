@@ -841,6 +841,7 @@ MonoBehaviour:
   levelController: {fileID: 668428611}
   gameOverPage: {fileID: 1813160402}
   buttonNextLevel: {fileID: 1569613593}
+  buttonRetry: {fileID: 1690110907}
   textScore: {fileID: 276234570}
   imageWin: {fileID: 493478479}
   imageLost: {fileID: 819592086}
@@ -1889,6 +1890,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1628983260}
   m_CullTransparentMesh: 1
+--- !u!1 &1690110907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1504479523888265260, guid: 813eafd2e1284454bb67ce77a9e2de13, type: 3}
+  m_PrefabInstance: {fileID: 5312659388326326425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1723951988
 GameObject:
   m_ObjectHideFlags: 0
@@ -2532,6 +2538,14 @@ PrefabInstance:
     - target: {fileID: 302492174965772896, guid: 813eafd2e1284454bb67ce77a9e2de13, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 328805241387354034, guid: 813eafd2e1284454bb67ce77a9e2de13, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 668428612}
+    - target: {fileID: 328805241387354034, guid: 813eafd2e1284454bb67ce77a9e2de13, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GameRestart
       objectReference: {fileID: 0}
     - target: {fileID: 5343059030225139050, guid: 813eafd2e1284454bb67ce77a9e2de13, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

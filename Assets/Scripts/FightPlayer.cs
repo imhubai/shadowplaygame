@@ -12,6 +12,8 @@ public class FightPlayer : MonoBehaviour
     public Image hpBar;
     
     public Animator animator;
+
+    public Level2 level2;
     public void TakeDamage(int damage)
     {
         curHp -= damage;
@@ -22,6 +24,10 @@ public class FightPlayer : MonoBehaviour
     {
         float value = cur * 1.0f / max;
         hpBar.fillAmount = value;
+        if (cur <= 0)
+        {
+            level2.GameOver(false);
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
