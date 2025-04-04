@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class Level2 : LevelController
@@ -9,6 +10,7 @@ public class Level2 : LevelController
     public Level2GameOver gameOverHandle;
 
     private bool isover = false;
+
     void Start()
     {
         fightPlayer.enabled = false;
@@ -26,11 +28,15 @@ public class Level2 : LevelController
             }
         }
     }
-    
+
     public void GameOver(bool win)
     {
         isover = true;
         gameOverHandle.gameOverPage.SetActive(true);
+        if (win)
+        {
+            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "-success", 1);
+        }
 
         gameOverHandle.Init(win, false, 0, 0, false, null);
     }

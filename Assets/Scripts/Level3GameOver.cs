@@ -33,6 +33,7 @@ public class Level3GameOver : GameOver
                 .ToString());
         }
 
+        buttonRetry.SetActive(true);
         if (customMsg)
         {
             textMsgWin.SetText(customMessage);

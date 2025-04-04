@@ -70,6 +70,7 @@ public class Dialogue : MonoBehaviour
             Destroy(this.gameObject);
             return;
         }
+
         DialogueStart(dialogueIndex);
     }
 
@@ -83,21 +84,41 @@ public class Dialogue : MonoBehaviour
         if (data.hasImageChange)
         {
             Debug.Log(data.imageFileName);
-            Sprite image = Resources.Load<Sprite>(data.imageFileName) as Sprite;
-            backGroundImage.sprite = image;
-            backGroundImage.GetComponent<Image>().color = Color.white;
+            if (data.imageFileName.Equals("none"))
+            {
+                Sprite image = Resources.Load<Sprite>("T") as Sprite;
+                backGroundImage.sprite = image;
+            }
+            else
+            {
+                Sprite image = Resources.Load<Sprite>(data.imageFileName) as Sprite;
+                backGroundImage.sprite = image;
+            }
         }
 
         if (data.hasAvatar)
         {
-            Sprite image = Resources.Load<Sprite>(data.avatarFileName) as Sprite;
-            avatarChara.sprite = image;
+            if (data.avatarFileName.Equals("none"))
+            {
+                avatarChara.GetComponent<Image>().color = new Color(1,1,1,0);
+            }
+            else
+            {
+                Sprite image = Resources.Load<Sprite>(data.avatarFileName) as Sprite;
+                avatarChara.sprite = image;
+                backGroundImage.GetComponent<Image>().color = Color.white;
+            }
         }
 
         if (data.hasSound)
         {
             AudioClip audioSource = Resources.Load<AudioClip>("Sounds/" + data.soundFileName);
-            audioChara.PlayOneShot(audioSource);
+            if (audioChara.isPlaying)
+            {
+                audioChara.Stop();
+            }
+            audioChara.clip = audioSource;
+            audioChara.Play();
         }
 
         textCharaName.SetText(data.characterName);

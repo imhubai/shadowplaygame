@@ -2,46 +2,49 @@
   "dialogItems": [
     {
       "characterName": "孙悟空 Sun Wukong",
-      "content": "嘿嘿，这金击子才是摘人参果的正经家伙！\nHeh, this golden mallet is the proper tool for harvesting ginseng fruits!",
+      "content": "吃俺老孙一棒！金箍棒还敲不下这果子？\nTaste my staff! Can't even knock down a fruit?",
       "hasAvatar": true,
-      "avatarFileName": "wukong_holding_mallet",
-      "hasImageChange": true,
-      "imageFileName": "golden_mallet_closeup"
-    },
-    {
-      "characterName": "孙悟空 Sun Wukong",
-      "content": "铛！——（金击子敲击树枝，人参果纹丝不动）\nClang!—(Mallet strikes branch, but fruit won't budge)",
-      "hasAvatar": true,
-      "avatarFileName": "wukong_confused",
+      "avatarFileName": "wukong_avatar_1",
       "hasSound": true,
-      "soundFileName": "metal_tap.wav",
-      "hasImageChange": false
+      "soundFileName": "b3f4b5bd-132f-4464-92c9-e91ecc3401b5",
+      "hasImageChange": true,
+      "imageFileName": "none"
     },
     {
       "characterName": "孙悟空 Sun Wukong",
-      "content": "怪哉！莫非要用这金盘接着才行？\nStrange! Must we catch them with the golden plate?",
-      "hasAvatar": true,
-      "avatarFileName": "wukong_thinking",
-      "hasImageChange": true,
-      "imageFileName": "golden_plate"
+      "content": "轰隆！（整棵人参果树剧烈摇晃，果子依然不落）\nBoom! (The whole tree shakes violently, but fruits hold firm)",
+      "hasAvatar": false,
+      "hasSound": true,
+      "soundFileName": "earthquake_rumble.wav"
+    },
+    {
+      "characterName": "孙悟空 Sun Wukong",
+      "content": "这劳什子竟要专用法器？听说要什么金击子！\nMust need special tools? Let's try the golden mallet!",
+      "hasAvatar": false,
+      "hasSound": true,
+      "soundFileName": "e12c16bd-117b-4818-bb0d-191ab555af3c"
     },
     {
       "characterName": "孙悟空 Sun Wukong",
       "content": "叮！叮！叮！（三声脆响，人参果应声坠落）\nDing! Ding! Ding! (Three chimes, fruits fall)",
       "hasAvatar": false,
       "hasSound": true,
-      "soundFileName": "crystal_chime.wav",
-      "hasImageChange": true,
-      "imageFileName": "fruits_falling_to_plate"
+      "soundFileName": "crystal_chime.wav"
     },
     {
       "characterName": "孙悟空 Sun Wukong",
-      "content": "妙啊！金击子配金盘，这才合乎天地法则！\nMarvelous! Golden mallet with golden plate - this obeys cosmic rules!",
-      "hasAvatar": true,
-      "avatarFileName": "wukong_cheering",
+      "content": "早该如此！天地灵物自要对应法器降服！\nShould've known! Divine treasures require sacred tools!",
+      "hasAvatar": false,
       "hasSound": true,
-      "soundFileName": "success_jingle.wav",
-      "hasImageChange": false
+      "soundFileName": "096edd54-fc8c-408e-be16-5ac8bcccd249"
+    },
+    {
+      "characterName": "猪八戒 Pigsy",
+      "content": "大师兄，咱们快点拿这金击子去拿人参果吧，俺老猪都饿坏了。\nBrother, let's quickly take this golden mallet to get the ginseng, I‘m starving.",
+      "hasAvatar": true,
+      "avatarFileName": "bajie_avatar_1",
+      "hasSound": true,
+      "soundFileName": "ba5d3a2f-1b3a-45d2-aef3-9e4efd26993f"
     }
   ]
 }

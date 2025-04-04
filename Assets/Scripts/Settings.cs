@@ -1,13 +1,19 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
+    public ToggleGroup fpsToggleGroup;
     public List<Toggle> fpsToggleList;
+    public ToggleGroup windowToggleGroup;
     public List<Toggle> windowToggleList;
+
+    public TMP_Text fpsCurrentText;
+    public TMP_Text windowCurrentText;
 
     private void Start()
     {
@@ -16,40 +22,68 @@ public class Settings : MonoBehaviour
 
     private void LoadSettings()
     {
-        int fps = PlayerPrefs.GetInt("fps", 30);
-        ChangeFps(fps);
-        switch (fps)
-        {
-            case 30:
-                fpsToggleList[0].isOn = true;
-                break;
-            case 60:
-                fpsToggleList[1].isOn = true;
-                break;
-            case 120:
-                fpsToggleList[2].isOn = true;
-                break;
-            default:
-                fpsToggleList[3].isOn = true;
-                break;
-        }
+        const int DEFAULT_FPS = 30;
+        const int FULLSCREEN_KEY = 0;
 
-        int screen = PlayerPrefs.GetInt("screen", 0);
-        ChangeFullscreen(screen == 0 ? true : false);
-        if (screen == 0)
+        var fpsValueToIndex = new Dictionary<int, int> {
+            {30, 0}, {60, 1}, {120, 2}, {-1, 3}
+        };
+
+        int savedFps = PlayerPrefs.GetInt("fps", DEFAULT_FPS);
+        fpsCurrentText.SetText("Current:"+savedFps);
+        ApplyFpsSettings(savedFps, fpsValueToIndex);
+
+        bool isFullscreen = PlayerPrefs.GetInt("screen", FULLSCREEN_KEY) == FULLSCREEN_KEY;
+        windowCurrentText.SetText("Current:"+isFullscreen);
+        ApplyScreenSettings(isFullscreen);
+    }
+
+    private void ApplyFpsSettings(int targetFps, Dictionary<int, int> fpsMap)
+    {
+        try 
         {
-            windowToggleList[0].isOn = true;
+            ChangeFps(targetFps);
         }
-        else
+        catch (ArgumentException)
         {
-            windowToggleList[1].isOn = true;
+            targetFps = 30;
+            ChangeFps(targetFps);
         }
+        SetFpsSave(targetFps);
+        int targetIndex = fpsMap.ContainsKey(targetFps) ? fpsMap[targetFps] : fpsMap[-1];
+        SafelySetToggle(fpsToggleList, targetIndex, nameof(fpsToggleList));
+    }
+
+    public void SetFpsSave(int targetFps)
+    {
+        PlayerPrefs.SetInt("fps", targetFps);
+    }
+
+    private void ApplyScreenSettings(bool isFullscreen)
+    {
+        ChangeFullscreen(isFullscreen);
+
+        int targetIndex = isFullscreen ? 0 : 1;
+        SetScreenSave(targetIndex);
+        SafelySetToggle(windowToggleList, targetIndex, nameof(windowToggleList));
+    }
+
+    public void SetScreenSave(int targetIndex)
+    {
+        PlayerPrefs.SetInt("screen", targetIndex);
+    }
+
+    private void SafelySetToggle(List<Toggle> toggleList, int index, string context)
+    {
+        if (index < 0 || index >= toggleList.Count) return;
+
+        toggleList.ForEach(t => t.SetIsOnWithoutNotify(false));
+        toggleList[index].SetIsOnWithoutNotify(true);
     }
 
     public void ChangeFps(int frame)
     {
         Application.targetFrameRate = frame;
-        PlayerPrefs.SetInt("fps", frame);
     }
 
     public void ChangeFullscreen(bool screenMode)
@@ -57,12 +91,10 @@ public class Settings : MonoBehaviour
         if (screenMode)
         {
             Screen.fullScreen = true;
-            PlayerPrefs.SetInt("screen", 0);
         }
         else
         {
             Screen.SetResolution(1920, 1080, false);
-            PlayerPrefs.SetInt("screen", 1);
         }
     }
 }

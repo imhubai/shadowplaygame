@@ -3,6 +3,7 @@ using System.Text;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class Level1 : LevelController
@@ -41,6 +42,10 @@ public class Level1 : LevelController
 
     public void GameOver(bool win)
     {
+        if (win)
+        {
+            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "-success", 1);
+        }
         gameOverHandle.gameOverPage.SetActive(true);
 
         gameOverHandle.Init(win, false, 0, 0, false, null);

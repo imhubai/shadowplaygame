@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      renshen_normal_0: -3530659945083956506
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

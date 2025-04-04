@@ -42,10 +42,10 @@
     },
     {
       "question": "皮影的材料是什么(What is the material of shadow puppetry)",
-      "contentA": "鸡皮(chicken skin)",
+      "contentA": "丝绸(silk)",
       "contentB": "纸(paper)",
-      "contentC": "羊毛(wool))",
-      "contentD": "驴皮(donkey skin)",
+      "contentC": "羊毛(wool)",
+      "contentD": "兽皮(animal skin)",
       "answer": 4
     },
     {

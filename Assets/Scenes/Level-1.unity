@@ -6337,6 +6337,10 @@ PrefabInstance:
       propertyPath: levelController
       value: 
       objectReference: {fileID: 32724210}
+    - target: {fileID: 3920022381054574502, guid: 0db55fb69e9f8284299f1d42dcefb3bf, type: 3}
+      propertyPath: dialogueDataJson
+      value: 
+      objectReference: {fileID: 4900000, guid: fc425eb4759446f38e0a717edeaf63d1, type: 3}
     - target: {fileID: 4083413373095270740, guid: 0db55fb69e9f8284299f1d42dcefb3bf, type: 3}
       propertyPath: m_Name
       value: Dialogue

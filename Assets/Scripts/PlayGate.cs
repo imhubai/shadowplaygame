@@ -40,20 +40,21 @@ public class PlayGate : MonoBehaviour
                     best = -1;
                 }
             }
+
             int isLocked = 1;
             try
             {
                 if (PlayerPrefs.GetInt(levelInfo.levelSceneName + "-success") == 1)
                 {
                     isLocked = 2;
-                };
+                }
             }
             catch (Exception e)
             {
                 isLocked = 1;
             }
 
-            if (_levelIndex == 0) isLocked = -1;
+            if (_levelIndex == 0 && PlayerPrefs.GetInt(levelInfo.levelSceneName + "-success", -1) == -1) isLocked = -1;
 
             _temp = Instantiate(levelContentPrefab, content.transform);
             _temp.GetComponent<LevelContent>().Init(levelInfo.name, levelInfo.levelSceneName, best, isLocked);
