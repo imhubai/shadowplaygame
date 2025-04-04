@@ -15,7 +15,7 @@
       "content": "轰隆！（整棵人参果树剧烈摇晃，果子依然不落）\nBoom! (The whole tree shakes violently, but fruits hold firm)",
       "hasAvatar": false,
       "hasSound": true,
-      "soundFileName": "earthquake_rumble.wav"
+      "soundFileName": "audio_06c36eff6a"
     },
     {
       "characterName": "孙悟空 Sun Wukong",
@@ -29,7 +29,7 @@
       "content": "叮！叮！叮！（三声脆响，人参果应声坠落）\nDing! Ding! Ding! (Three chimes, fruits fall)",
       "hasAvatar": false,
       "hasSound": true,
-      "soundFileName": "crystal_chime.wav"
+      "soundFileName": "audio_20d72e7e30"
     },
     {
       "characterName": "孙悟空 Sun Wukong",

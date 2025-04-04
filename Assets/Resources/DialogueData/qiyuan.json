@@ -7,8 +7,8 @@
       "avatarFileName": "",
       "hasSound": true,
       "soundFileName": "635031168_1743746504_0",
-      "hasImageChange": false,
-      "imageFileName": ""
+      "hasImageChange": true,
+      "imageFileName": "Background/h1"
     },
     {
       "characterName": "旁白 Narrator",
@@ -17,8 +17,8 @@
       "avatarFileName": "",
       "hasSound": true,
       "soundFileName": "1120070574_1743746523_0",
-      "hasImageChange": false,
-      "imageFileName": ""
+      "hasImageChange": true,
+      "imageFileName": "Background/li2"
     },
     {
       "characterName": "旁白 Narrator",
@@ -27,8 +27,8 @@
       "avatarFileName": "",
       "hasSound": true,
       "soundFileName": "37554439_1743746536_0",
-      "hasImageChange": false,
-      "imageFileName": ""
+      "hasImageChange": true,
+      "imageFileName": "Background/niupi"
     },
     {
       "characterName": "旁白 Narrator",
@@ -37,8 +37,8 @@
       "avatarFileName": "",
       "hasSound": true,
       "soundFileName": "803777764_1743746551_0",
-      "hasImageChange": false,
-      "imageFileName": ""
+      "hasImageChange": true,
+      "imageFileName": "Background/xitai"
     },
     {
       "characterName": "旁白 Narrator",
@@ -47,8 +47,8 @@
       "avatarFileName": "",
       "hasSound": true,
       "soundFileName": "388586676_1743746561_0",
-      "hasImageChange": false,
-      "imageFileName": ""
+      "hasImageChange": true,
+      "imageFileName": "Background/wukong_stone"
     },
     {
       "characterName": "旁白 Narrator",
@@ -57,8 +57,8 @@
       "avatarFileName": "",
       "hasSound": true,
       "soundFileName": "2092095286_1743746568_0",
-      "hasImageChange": false,
-      "imageFileName": ""
+      "hasImageChange": true,
+      "imageFileName": "Background/wukong"
     },
     {
       "characterName": "旁白 Narrator",
@@ -67,8 +67,8 @@
       "avatarFileName": "",
       "hasSound": true,
       "soundFileName": "781879320_1743746581_0",
-      "hasImageChange": false,
-      "imageFileName": ""
+      "hasImageChange": true,
+      "imageFileName": "Background/shitu"
     },
     {
       "characterName": "旁白 Narrator",
@@ -87,8 +87,8 @@
       "avatarFileName": "",
       "hasSound": true,
       "soundFileName": "76507548_1743746597_0",
-      "hasImageChange": false,
-      "imageFileName": ""
+      "hasImageChange": true,
+      "imageFileName": "none"
     }
   ]
 }

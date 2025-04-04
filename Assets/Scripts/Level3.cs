@@ -22,12 +22,14 @@ public class Level3 : LevelController
     public TMP_Text timeText;
     public int time = 100;
 
+    public AudioSource ginsengGetAudio;
     public bool hasScore = true;
     private bool _gameStart = false;
 
     public Level3GameOver gameOverHandle;
     public void PointChange(int point)
     {
+        ginsengGetAudio.Play();
         this.point += point;
         pointText.SetText(this.point.ToString());
     }
